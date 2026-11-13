@@ -48,7 +48,7 @@
 
 <script type="module">
 const SCENE_FILE = 'scene.sog';   // ← 장면 파일 이름은 여기서 바꿉니다
-const HOME_VIEW = { pos: [3.063, 0.859, -1.618], target: [-1.775, -0.426, -1.989] };  // 촬영 카메라 기준 시작 시점
+const HOME_VIEW = null;  // 동영상 결과로 바꾸면서 예전 사진 기준 시작 시점은 뺐습니다 (장면 크기에 맞춰 자동으로 잡음)
 
 const $ = (id) => document.getElementById(id);
 const step = (id, ok = true) => $(id).className = ok ? 'done' : 'err';
@@ -94,7 +94,7 @@ async function load(bytes, name, sizeLabel, ms) {
   const c = box.getCenter(new THREE.Vector3()), s = box.getSize(new THREE.Vector3());
   const r = Math.max(s.x, s.y, s.z);
   if (name === SCENE_FILE && HOME_VIEW) {
-    // 사진 00.jpg를 찍은 카메라 위치에서 시작
+    // HOME_VIEW가 있으면 그 시점에서 시작
     camera.position.fromArray(HOME_VIEW.pos);
     controls.target.fromArray(HOME_VIEW.target);
   } else {
