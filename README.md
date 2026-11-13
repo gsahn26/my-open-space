@@ -2,8 +2,8 @@
 
 폰으로 찍은 사진 9장으로 바닥 위의 피규어를 3D 알갱이(가우시안 스플랫)로 만들고, 웹에서 돌려 볼 수 있게 했습니다.
 
-- 공개 주소: `https://<내 GitHub 아이디>.github.io/my-open-space/` ← 올린 뒤 채우기
-- 장면 파일 직접 확인: 위 주소 뒤에 `/scene.sog`
+- 공개 주소: https://gsahn26.github.io/my-open-space/
+- 장면 파일 직접 확인: https://gsahn26.github.io/my-open-space/scene.sog
 
 ## 1. 공개 판단
 
